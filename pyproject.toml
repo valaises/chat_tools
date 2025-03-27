@@ -1,9 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "chat-tools"
 version = "0.1.0"
-description = "Add your description here"
+description = "Tools and utilities for building chat-based applications"
 readme = "README.md"
 requires-python = ">=3.12"
+license = {file = "LICENSE"}
+
+authors = [
+    {name = "Valerii"},
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
 dependencies = [
     "pydantic>=2.10.6",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/valerii/chat_tools"
+"Bug Tracker" = "https://github.com/valerii/chat_tools/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["chat_tools"]
